@@ -10,6 +10,7 @@ public class Squad {
         this.maxSize = 5;
         this.name = name;
         this.cause = cause;
+        instances.add(this);
     }
 
     public String getName() {
@@ -23,7 +24,12 @@ public class Squad {
     public String getCause() {
         return cause;
     }
+    public static ArrayList<Squad> createSquads(String name, String cause){
+        Squad squad = new Squad(name, cause);
+        return Squad.getAll();
+    }
     public static ArrayList<Squad> getAll(){
         return instances;
     }
+
 }
