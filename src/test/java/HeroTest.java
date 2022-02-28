@@ -16,7 +16,7 @@ class HeroTest {
 
     @Test
     public void NewHeroObjectGetsCorrectlyCreated_true() throws Exception {
-        Hero hero = new Hero(1,"Superman", 30,  "Strength","love", "https://www.superherodb.com/pictures2/portraits/10/100/1496.jpg");
+        Hero hero = new Hero("Superman", 30,  "Strength","love", "https://www.superherodb.com/pictures2/portraits/10/100/1496.jpg");
         assertTrue(hero instanceof Hero);
     }
 }
