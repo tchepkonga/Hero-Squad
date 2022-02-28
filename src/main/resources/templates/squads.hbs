@@ -1,0 +1,11 @@
+{{#partial "content"}}
+    {{#if squads}}
+        {{#each squads}}
+            <h3>Squad name is <i>{{name}}</i></h3>
+            <p>Cause is {{cause}}</p>
+        {{/each}}
+    {{else}}
+        No Squads created yet!!
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

@@ -11,4 +11,19 @@ public class Squad {
         this.name = name;
         this.cause = cause;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getMaxSize() {
+        return maxSize;
+    }
+
+    public String getCause() {
+        return cause;
+    }
+    public static ArrayList<Squad> getAll(){
+        return instances;
+    }
 }
