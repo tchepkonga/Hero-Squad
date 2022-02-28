@@ -9,7 +9,7 @@ public class App {
     public static void main(String[] args) {
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-           return new ModelAndView(model, "hero.hbs");
+           return new ModelAndView(model, "heroes.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }
