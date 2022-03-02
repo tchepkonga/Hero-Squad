@@ -3,8 +3,9 @@
         {{#each squads}}
             <h5>Squad name is: <i>{{name}}</i></h5>
             <p>Cause is: {{cause}}</p>
-            <button class="btn btn-info"><a href="/hero-form">Add a Hero to {{name}}</a></button>
-            {{squadHeroes}}
+            <button class="btn btn-info"><a href="squads/{{id}}/new-hero">Add a Hero to {{name}}</a></button>
+            <button class="btn btn-primary"><a href="squads/{{id}}"> Check {{name}} Heroes</a></button>
+
         {{/each}}
     {{else}}
         No Squads created yet!!

@@ -25,6 +25,9 @@ public class Hero {
     public int getAge() {
         return age;
     }
+    public int getId() {
+        return mId;
+    }
 
     public String getSpecialPowers() {
         return specialPower;
