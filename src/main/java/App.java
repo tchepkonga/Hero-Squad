@@ -33,6 +33,19 @@ public class App {
             model.put("cause", cause);
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
+        post("/hero-success", (request, response) -> {
+            Map <String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            int age = Integer.parseInt(request.queryParams("age"));
+            String specialPower = request.queryParams("specialPower");
+            String weakness = request.queryParams("weakness");
+            Hero hero = new Hero(name,age,specialPower,weakness);
+            Squad squad = Squad.findSquad(Integer.parseInt(request.queryParams("squadId")));
+            squad.addHero(hero);
+            model.put("name",name);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 
 }

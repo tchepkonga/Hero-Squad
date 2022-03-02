@@ -5,15 +5,15 @@ public class Hero {
     private String name;
     private static final ArrayList<Hero> instances = new ArrayList<>();
     private int age;
-    private String specialPowers;
-    private String weaknesses;
+    private String specialPower;
+    private String weakness;
 
 
-    public Hero(String name, int age, String specialPowers, String weaknesses) {
+    public Hero(String name, int age, String specialPower, String weakness) {
         this.name = name;
         this.age = age;
-        this.specialPowers = specialPowers;
-        this.weaknesses = weaknesses;
+        this.specialPower = specialPower;
+        this.weakness = weakness;
         instances.add(this);
         mId = instances.size();
     }
@@ -27,11 +27,11 @@ public class Hero {
     }
 
     public String getSpecialPowers() {
-        return specialPowers;
+        return specialPower;
     }
 
-    public String getWeaknesses() {
-        return weaknesses;
+    public String getWeakness() {
+        return weakness;
     }
 
     public static ArrayList<Hero> getAll(){

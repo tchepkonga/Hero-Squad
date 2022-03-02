@@ -37,7 +37,7 @@ public class Squad {
         return mId;
     }
 
-    public static Squad findHero(int id){
+    public static Squad findSquad(int id){
         return instances.get(id - 1);
     }
 
