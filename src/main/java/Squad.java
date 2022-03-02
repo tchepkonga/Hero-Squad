@@ -5,14 +5,14 @@ public class Squad {
     private int mId;
     private String cause;
     private static final ArrayList<Squad> instances = new ArrayList<>();
-    private ArrayList<Hero> squadHeroes;
+    ArrayList<Hero> squadHeroes;
 
 
     public Squad(String name, String cause){
         this.name = name;
         this.cause = cause;
         instances.add(this);
-        squadHeroes = new ArrayList<>();
+        this.squadHeroes = new ArrayList<>();
         mId = instances.size();
 
     }

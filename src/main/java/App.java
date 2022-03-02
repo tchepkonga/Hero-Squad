@@ -25,23 +25,13 @@ public class App {
             model.put("squads",request.session().attribute("squads"));
             return new ModelAndView(model, "squads.hbs");
         },new HandlebarsTemplateEngine());
-        get("/squads/:id", (request, response) -> {
-            Map <String, Object> model = new HashMap<>();
-            int squadId = Integer.parseInt(request.params(":id"));
-            if (request.session().attribute("squads")){
-                ArrayList<Squad> squadArrayList=  request.session().attribute("squads");
-                model.put("squad",squadArrayList.get(squadId));
-                return new ModelAndView(model, "squads.hbs");
-            }
 
-
-            return new ModelAndView(model, "squads.hbs");
-        },new HandlebarsTemplateEngine());
         post("/success", (request, response) -> {
             Map <String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
             String cause = request.queryParams("cause");
             Squad squad = new Squad(name,cause);
+//            ArrayList<Squad> squads = Squad.getAll();
             request.session().attribute("squads", Squad.getAll());
             model.put("name",name);
             model.put("cause", cause);
@@ -61,11 +51,22 @@ public class App {
             String weakness = request.queryParams("weakness");
             int squadId = Integer.parseInt(request.params(":id"));
             Hero hero = new Hero(name,age,specialPower,weakness);
-            Squad.findSquad(squadId).addHero(hero);
+            ArrayList<Squad> squads = request.session().attribute("squads");
+            Squad newSquad = squads.get(squadId-1);
+            newSquad.squadHeroes.add(hero);
+            squads.set(squadId-1,newSquad);
+            request.session().attribute("squads", squads);
             model.put("name",name);
             return new ModelAndView(model, "hero-success.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/squads/:id", (request, response) -> {
+            Map <String, Object> model = new HashMap<>();
+            ArrayList<Squad> squads =request.session().attribute("squads");
+            Squad squad = squads.get(Integer.parseInt(request.params(":id")) - 1);
+            model.put("squad",squad);
+            return new ModelAndView(model, "single-squad.hbs");
 
+        },new HandlebarsTemplateEngine());
     }
 
 }

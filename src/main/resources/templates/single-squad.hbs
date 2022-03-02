@@ -1,0 +1,17 @@
+{{#partial "content"}}
+    <h1>Welcome to {{squad.name}}</h1>
+    <p>They are dedicated to {{squad.cause}}</p>
+    <p>Heroes are:</p>
+    {{#if squad.squadHeroes}}
+        {{#each squad.squadHeroes}}
+            <p>Hero number {{id}}</p>
+            <p>Name is: {{name}}</p>
+            <p>Special Power is {{specialPower}}</p>
+            <p>Weakness is {{weakness}}</p>
+        {{/each}}
+    {{else}}
+        No Heroes
+    {{/if}}
+    <a href="/squads">Go back to all squads</a>
+{{/partial}}
+{{>layout.hbs}}
