@@ -3,6 +3,15 @@
         {{#each squads}}
             <h3>Squad name is <i>{{name}}</i></h3>
             <p>Cause is {{cause}}</p>
+<!--            {{#if squadHeroes}}-->
+<!--                {{#each squadHeroes}}-->
+<!--                    <h3>Hero name is <i>{{name}}</i></h3>-->
+<!--                    <p>Age is {{age}}</p>-->
+<!--                {{/each}}-->
+<!--            {{else}}-->
+<!--                No Heroes in squad yet!!-->
+<!--            {{/if}}-->
+            {{squadHeroes}}
         {{/each}}
     {{else}}
         No Squads created yet!!

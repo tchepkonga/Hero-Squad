@@ -21,14 +21,23 @@ public class App {
             model.put("heroes", request.session().attribute("heroes"));
             return new ModelAndView(model, "heroes.hbs");
         }, new HandlebarsTemplateEngine());
-        post("/squads", (request, response) -> {
+        get("/squads", (request, response) -> {
             Map <String, Object> model = new HashMap<>();
-            String name = request.queryParams("name");
-            String cause = request.queryParams("cause");
-            Squad.createSquads(name,cause);
             request.session().attribute("squads", Squad.getAll());
             model.put("squads",request.session().attribute("squads"));
             return new ModelAndView(model, "squads.hbs");
+        },new HandlebarsTemplateEngine());
+        post("/success", (request, response) -> {
+            Map <String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            String cause = request.queryParams("cause");
+            Squad squad = new Squad(name,cause);
+            ArrayList<Squad> squadArr= request.session().attribute("squads");
+            squadArr.add(squad);
+            request.session().attribute("squads",squadArr);
+            model.put("name",name);
+            model.put("cause", cause);
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
     }
 
