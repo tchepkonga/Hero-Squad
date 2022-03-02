@@ -1,24 +1,25 @@
 {{#partial "content"}}
-    <h2 style="color: green"><i>Create a Hero for {{squad.name}}.</i></h2>
+    <h4 ><i>Create a Hero for {{squad.name}}</i></h4>
+    <h5 class="text-success"><i>A squad is limited to only 5 heroes.</i></h5>
     <form action="new-hero-success" method="post">
-        <div>
+        <div class="form-group" >
             <label for="name">Enter Hero name: </label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" class="form-control">
         </div>
-        <div>
+        <div class="form-group" >
             <label for="age">Enter age: </label>
-            <input type="text" name="age" id="age">
+            <input type="text" name="age" id="age" class="form-control" >
         </div>
-        <div>
-            <label for="specialPower">Enter weakness: </label>
-            <input type="text" name="specialPower" id="specialPower">
+        <div class="form-group" >
+            <label for="specialPower">Enter Special power: </label>
+            <input type="text" name="specialPower" id="specialPower" class="form-control" >
         </div>
-        <div>
+        <div class="form-group" >
             <label for="weakness">Enter weakness: </label>
-            <input type="text" name="weakness" id="weakness">
+            <input type="text" name="weakness" id="weakness" class="form-control" >
         </div>
 
-        <button type="submit" class="btn btn-primary"> Create Hero </button>
+        <button type="submit" class="btn btn-primary" > Create Hero </button>
     </form>
 {{/partial}}
 {{>layout.hbs}}

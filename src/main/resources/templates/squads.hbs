@@ -1,10 +1,13 @@
 {{#partial "content"}}
     {{#if squads}}
         {{#each squads}}
-            <h5>Squad name is: <i>{{name}}</i></h5>
-            <p>Cause is: {{cause}}</p>
-            <button class="btn btn-info"><a href="squads/{{id}}/new-hero">Add a Hero to {{name}}</a></button>
-            <button class="btn btn-secondary"><a href="squads/{{id}}"> Check {{name}} Heroes</a></button>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Squad name is: <i>{{name}}</li>
+                <li class="list-group-item">Cause is: {{cause}}</li>
+            </ul>
+
+                <button class="btn btn-info"><a href="squads/{{id}}/new-hero">Add a Hero to {{name}}</a></button>
+                <button class="btn btn-secondary"><a href="squads/{{id}}"> Check {{name}} Heroes</a></button>
 
         {{/each}}
     {{else}}
