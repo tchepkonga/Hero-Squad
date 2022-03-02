@@ -19,24 +19,24 @@
 - Class instantiation test.
 - Class' ability to return a squads name.
 - Class' ability to keep track of all of it's instantiated objects.
-- Class dynamic Id assignment during object instantiation.
+- Class dynamic I'd assignment during object instantiation.
 
 
 
 ## Author
 
-Kolum Ronald (https://github.com/kolumr)
+titus chepkonga (https://github.com/tchepkonga)
 
 ## Built with
 - [Java](http://www.oracle.com/technetwork/java/index.html)
     * [Spark framework](http://sparkjava.com/)
 
 ## Setup
-- Clone or downlad repo from [Here](https://github.com/kolumr/Hero/tree/master)
+- Clone or download repo from [Here](https://github.com/tchepkonga/Hero/tree/master)
 - Download latest version of `java` and `gradle`.
 - from the parent directory, run `$ gradle build` then `gradle run`.
 - Launch the program from your local server `http://localhost:4567` in your browser.
-- you can access the fully functioning app [here](https://github.com/kolumr/Hero/tree/master).
+- you can access the fully functioning app [here](https://github.com/tchepkonga/Hero/tree/master).
 
 
 

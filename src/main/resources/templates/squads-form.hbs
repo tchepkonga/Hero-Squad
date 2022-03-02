@@ -1,13 +1,13 @@
 {{#partial "content"}}
-    <p style="color: red"><i>A squad is limited to only 5 heroes.</i></p>
+
     <form action="/success" method="post">
-        <div>
+        <div class="form-group" >
             <label for="name">Enter Squad name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" class="form-control" >
         </div>
-        <div>
-            <label for="cause">Enter the cause of your squad</label>
-            <input type="text" name="cause" id="cause">
+        <div class="form-group">
+            <label for="cause" >Enter the cause of your squad</label>
+            <input type="text" name="cause" id="cause" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary"> Create Squad </button>

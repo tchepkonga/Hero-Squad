@@ -1,13 +1,17 @@
 {{#partial "content"}}
-    <h1>Welcome to {{squad.name}}</h1>
+    <h1>SQUAD: {{squad.name}}</h1>
     <p>They are dedicated to {{squad.cause}}</p>
     <p>Heroes are:</p>
-    {{#if squad.squadHeroes}}
-        {{#each squad.squadHeroes}}
-            <p>Hero number {{id}}</p>
-            <p>Name is: {{name}}</p>
-            <p>Special Power is {{specialPower}}</p>
-            <p>Weakness is {{weakness}}</p>
+    {{#if heroes}}
+        {{#each heroes}}
+            <ul class="list-group list group-flush">
+                <li class="list-group-item" style="background:#D3D3D3 ">Hero ID: {{id}}</li>
+                <li class="list-group-item">Name is: {{name}}</li>
+                <li class="list-group-item">Age is: {{age}}</li>
+                <li class="list-group-item">Special Power is{{specialPower}}</li>
+                <li class="list-group-item">Weakness is {{weakness}}</li>
+            </ul>
+
         {{/each}}
     {{else}}
         No Heroes

@@ -1,8 +1,11 @@
 {{#partial "content"}}
-<h4 class="success">Squad successfully created</h4>
-<h3>Squad name is <i>{{name}}</i></h3>
-<p>Cause is {{cause}}</p>
-<h4><a href="/squads">View all Squads</a></h4>
-<h4><a href="/squads-form">Create new squad</a></h4>
+<h4 class="text-success">Squad successfully created</h4>
+<div>
+    <p>Squad name is <i>{{name}}</i></p>
+    <p>Cause is {{cause}}</p>
+</div>
+
+<button class="btn btn-info"><a href="/squads">View all Squads</a><h4></h4></button>
+<button class="btn btn-link"><a href="/squads-form">Create new squad</a></button>
 {{/partial}}
 {{> layout.hbs}}
