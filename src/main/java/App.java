@@ -30,7 +30,7 @@ public class App {
             Map <String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
             String cause = request.queryParams("cause");
-            Squad squad = new Squad(name,cause);
+            new Squad(name, cause);
 //            ArrayList<Squad> squads = Squad.getAll();
             request.session().attribute("squads", Squad.getAll());
             model.put("name",name);
