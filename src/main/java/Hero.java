@@ -18,6 +18,9 @@ public class Hero {
         mId = instances.size();
     }
 
+    public static void createHeroes() {
+    }
+
     public String getName() {
         return name;
     }

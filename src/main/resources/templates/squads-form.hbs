@@ -1,4 +1,5 @@
 {{#partial "content"}}
+<<<<<<< HEAD
 
     <form action="/success" method="post">
         <div class="form-group" >
@@ -8,6 +9,17 @@
         <div class="form-group">
             <label for="cause" >Enter the cause of your squad</label>
             <input type="text" name="cause" id="cause" class="form-control">
+=======
+    <p style="color: red"><i>A squad is limited to only 5 heroes.</i></p>
+    <form action="/success" method="post">
+        <div>
+            <label for="name">Enter Squad name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="cause">Enter the cause of your squad</label>
+            <input type="text" name="cause" id="cause">
+>>>>>>> 5961b92 (Added another template and moved the squads form there)
         </div>
 
         <button type="submit" class="btn btn-primary"> Create Squad </button>
