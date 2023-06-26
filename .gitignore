@@ -1,5 +1,5 @@
 # Compiled source #
-############
+########
 *.com
 *.class
 *.dll
@@ -34,7 +34,7 @@ ehthumbs.db
 Thumbs.db
 
 # Java and Gradle #
-############
+#########
 build/
 .gradle/
 out/
